@@ -73,3 +73,9 @@ insert into info_partido values (3,4,87,65,"13:40","14:00");
 insert into info_partido values (4,4,97,85,"13:40","14:00");
 insert into info_partido values (2,4,107,65,"13:40","14:00");
 
+
+
+
+
+select * from cancha;
+

@@ -242,3 +242,35 @@ CREATE TABLE cuartos(inicio DATETIME,
               FOREIGN KEY(inicio_temporada) REFERENCES temporadas(inicio),
               FOREIGN KEY(fin_temporada) REFERENCES temporadas(fin)
               );
+
+
+INSERT INTO jugadores (nif,nombre,apellidos,estatura,peso,nacido,equipo,comunidad)
+    VALUES ('11112','pepe','leches',1.7,80,'madrid','madrid','madrid');
+
+
+INSERT INTO entrenadores (nif,nombre,apellidos,nacido,equipo,comunidad)
+    VALUES ('22222','mou','riño','madagascar','madrid','madrid');
+
+
+INSERT INTO empresas(cif,nombre)
+    VALUES ('4545EMP','URJC');
+
+INSERT INTO comunidades(nombre)
+    VALUES ('madrid');
+
+INSERT INTO canchas(nombre,calle,numero,comunidad)
+    VALUES ('palacio','gran via',5,'madrid');
+
+INSERT INTO equipos(nombre,nif_entrenador,cif_empresa,comunidad)
+    VALUES('madrid','22222','4545EMP','madrid');
+
+INSERT INTO temporadas(inicio,fin)
+    VALUES(datetime(),"2016-12-31 10:05:00");
+
+INSERT INTO libro_jugadas(jugada,campo_en_relacion)
+    VALUES('tiro a canasta','rebote');
+INSERT INTO libro_jugadas(jugada,campo_en_relacion)
+    VALUES('tiro a canasta','3');
+
+INSERT INTO tipos_jugada(tipo,campo_en_relacion)
+    VALUES('ataque','(3,5)');
