@@ -150,3 +150,37 @@ CREATE TABLE Tiempo
 inicio DATETIME,
 fin DATETIME,
 puntuacion VARCHAR(10));
+
+
+INSERT INTO Participante (nif, nombre, primer_apell, seg_apell, fecha_nac)
+VALUES('12345678L', 'Juan', 'Ramirez', 'Garcia', "1992-12-15 12:00:00");
+
+INSERT INTO Participante (nif, nombre, primer_apell, fecha_nac)
+VALUES('87654321S', 'Pedro', 'Gasol', "1980-03-02 12:00:00");
+
+INSERT INTO Participante (nif, nombre, primer_apell, seg_apell, fecha_nac)
+VALUES('87125476P', 'Jorge', 'Gordon', 'Llamo', "1992-02-28 01:00:00");
+
+INSERT INTO Jugador (nif, estatura, equipo) VALUES ('12345678L', 1.85, 'Estudiantes');
+INSERT INTO Jugador (nif, estatura, equipo) VALUES ('87125476P', 1.90, 'Real Madrid');
+
+INSERT INTO Ciudad (nombre, comunidad)
+VALUES ('Alcala', 'Madrid');
+
+INSERT INTO Ciudad (nombre, comunidad)
+VALUES ('Alcala', 'Granada');
+
+INSERT INTO Ciudad (nombre, comunidad)
+VALUES ('Madrid', 'Madrid');
+
+INSERT INTO Ciudad (nombre, comunidad)
+VALUES ('Navalcarnero', 'Madrid');
+
+INSERT INTO Ciudad (nombre, comunidad)
+VALUES ('Bilbao', 'Euskadi');
+
+INSERT INTO Ciudad (nombre, comunidad)
+VALUES ('Donosti', 'Euskadi');
+
+INSERT INTO Ciudad (nombre, comunidad)
+VALUES ('Vallecas', 'Madrid');

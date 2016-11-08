@@ -1,0 +1,73 @@
+
+CREATE TABLE Comunidades(
+    comunidad VARCHAR(30),
+    PRIMARY KEY (comunidad));
+
+INSERT INTO Comunidades(comunidad) VALUES ('madrid');
+INSERT INTO Comunidades(comunidad) VALUES ('galicia');
+INSERT INTO Comunidades(comunidad) VALUES ('cantabria');
+
+SELECT * FROM Comunidades;
+
+CREATE TABLE Ciudades(
+    ciudad VARCHAR(30),
+    comunidad VARCHAR(30) NOT NULL,
+    PRIMARY KEY (ciudad, comunidad),
+    FOREIGN KEY (comunidad) REFERENCES Comunidades(comunidad) ON DELETE CASCADE);
+
+
+INSERT INTO Ciudades(ciudad, comunidad) VALUES ('alcobendas','madrid');
+INSERT INTO Ciudades(ciudad, comunidad) VALUES ('lugo','galicia');
+INSERT INTO Ciudades(ciudad, comunidad) VALUES ('pontevedra','galicia');
+INSERT INTO Ciudades(ciudad, comunidad) VALUES ('alcobendas','cantabria');
+
+SELECT * FROM Ciudades;
+
+CREATE TABLE Equipos(
+    equipo VARCHAR(30),
+    ciudad VARCHAR(30) NOT NULL,
+    comunidad VARCHAR(30) NOT NULL,
+    PRIMARY KEY (equipo, ciudad, comunidad),
+    FOREIGN KEY (ciudad,comunidad) REFERENCES Ciudades(ciudad,comunidad) ON DELETE CASCADE);
+
+INSERT INTO Equipos(equipo, ciudad, comunidad)
+VALUES ('atletico', 'lugo', 'galicia');
+INSERT INTO Equipos(equipo, ciudad, comunidad)
+VALUES ('atletico', 'alcobendas', 'madrid');
+INSERT INTO Equipos(equipo, ciudad, comunidad)
+VALUES ('real', 'alcobendas', 'madrid');
+INSERT INTO Equipos(equipo, ciudad, comunidad)
+VALUES ('deportivo', 'pontevedra', 'galicia');
+INSERT INTO Equipos(equipo, ciudad, comunidad)
+VALUES ('betis', 'alcobendas', 'cantabria');
+
+SELECT * FROM Equipos;
+
+CREATE TABLE Canchas(
+    cancha VARCHAR(30),
+    PRIMARY KEY (cancha));
+
+INSERT INTO Canchas(cancha) VALUES ('cancha1');
+INSERT INTO Canchas(cancha) VALUES ('cancha2');
+INSERT INTO Canchas(cancha) VALUES ('cancha3');
+
+SELECT * FROM Canchas;
+
+CREATE TABLE Direcciones_de_canchas(
+    cancha VARCHAR(30) NOT NULL,
+    calle VARCHAR(30) NOT NULL,
+    numero INT NOT NULL,
+    ciudad VARCHAR(30) NOT NULL,
+    comunidad VARCHAR(30) NOT NULL,
+    PRIMARY KEY (cancha, calle, numero, ciudad, comunidad),
+    FOREIGN KEY (cancha) REFERENCES Canchas(cancha) ON DELETE CASCADE,
+    FOREIGN KEY (ciudad,comunidad) REFERENCES Ciudades(ciudad,comunidad) ON DELETE CASCADE);
+
+INSERT INTO Direcciones_de_canchas(cancha, calle, numero, ciudad, comunidad)
+VALUES ('cancha1', 'cervantes', 22 , 'lugo', 'galicia');
+INSERT INTO Direcciones_de_canchas(cancha, calle, numero, ciudad, comunidad)
+VALUES ('cancha2', 'felicidad', 156 , 'alcobendas', 'cantabria');
+INSERT INTO Direcciones_de_canchas(cancha, calle, numero, ciudad, comunidad)
+VALUES ('cancha3', 'naranjos', 35 , 'pontevedra', 'galicia');
+
+SELECT * FROM Direcciones_de_canchas;
