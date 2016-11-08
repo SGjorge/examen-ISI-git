@@ -42,6 +42,7 @@ select * from entrenadores;
                                primary key(nif));
  insert into jugadores (nif,nombre,apellidos,fecha_nacimiento) values ('50F','FERNANDO','CALVO', "1995-07-15 10:00:00");
 
+
 select * from jugadores;
 
 create table direcciones_canchas (id_direccion int not null,
@@ -63,5 +64,7 @@ create table canchas (id_cancha int not null,
 
 
 select * from empresas;
+
+
 
 
