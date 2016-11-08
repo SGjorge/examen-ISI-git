@@ -84,6 +84,14 @@ Values('4444E', 'LASSA');
 INSERT INTO Empresas(cif,nombre)
 Values('5555E', 'Endesa');
 
+
+INSERT INTO Empresas(cif,nombre)
+Values('6666E', 'TATA MOTORS');
+
+INSERT INTO Empresas(cif,nombre)
+Values('7777E', 'Inditex');
+
+
 CREATE TABLE Empresa_Equipo(
 cif VARCHAR(20),
 eid INT,
