@@ -6,6 +6,11 @@ seg_apell VARCHAR(30),
 fecha_nac DATETIME,
 PRIMARY KEY (nif));
 
+
+
+
+
+
 CREATE TABLE Entrenador
 (nif VARCHAR(10),
 PRIMARY KEY (nif),
@@ -184,3 +189,21 @@ VALUES ('Donosti', 'Euskadi');
 
 INSERT INTO Ciudad (nombre, comunidad)
 VALUES ('Vallecas', 'Madrid');
+
+SELECT *
+FROM Jugador
+INNER JOIN Equipo
+ON Equipo.nombre = Jugador.equipo;
+
+SELECT inicio, fin\,
+  FROM Record\,
+  JOIN Jugada,
+  ON Record.tipo = 'maxima puntuacion',
+  GROUP BY Jugada;
+
+SELECT equipo,
+  FROM Entrena_en,
+  WHERE Entrena_en.nif_entrenador = ,
+  (SELECT nif,
+  FROM Participante,
+  WHERE Participante.nombre = 'Pablo' AND Participante.primer_apell = 'Laso');
