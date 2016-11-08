@@ -512,29 +512,6 @@ PRIMARY KEY(jid),
 FOREIGN KEY(jid) REFERENCES Jugadas(jid)
 );
 
+SELECT * FROM PESO;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+SELECT * FROM Partidos_Jug;
