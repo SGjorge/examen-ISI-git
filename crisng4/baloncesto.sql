@@ -77,3 +77,8 @@ INSERT INTO Empresa(cif,nombre,equipo_patrocinado)
 VALUES ('0000003', 'BQ','Valladolid');
 CREATE TABLE JugadasEnPartido(hora_in datetime, hora_fin datetime, nombre_jugador varchar(50), coordenada_x int, coordenada_y int, PRIMARY KEY(hora_in,hora_fin,nombre_jugador),FOREIGN KEY (nombre_jugador) REFERENCES Jugador(nombre) );
 CREATE TABLE JugadasDefensa(hora_in datetime, hora_fin datetime, nombre_jugador varchar(50),jugador_defendido varchar(50), PRIMARY KEY(hora_in,hora_fin,nombre_jugador),FOREIGN KEY (hora_in,hora_fin,nombre_jugador) REFERENCES JugadasEnPartido(hora_in,hora_fin,nombre_jugador) );
+
+INSERT INTO Equipo(nombre,nombre_ciudad)
+VALUES ('Illes', 'Toledo');
+INSERT INTO Equipo(nombre, nombre_ciudad)
+VALUES ('Betis Cordoba','Cordoba');
