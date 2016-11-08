@@ -184,3 +184,12 @@ VALUES ('Donosti', 'Euskadi');
 
 INSERT INTO Ciudad (nombre, comunidad)
 VALUES ('Vallecas', 'Madrid');
+
+
+-- Nerea Del Olmo:
+-- QUERY: buscar los equipos de cada jugador:
+
+SELECT *
+FROM Jugador
+INNER JOIN Equipo
+ON Equipo.nombre = Jugador.equipo;
