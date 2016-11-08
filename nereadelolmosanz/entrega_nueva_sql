@@ -71,3 +71,5 @@ INSERT INTO Direcciones_de_canchas(cancha, calle, numero, ciudad, comunidad)
 VALUES ('cancha3', 'naranjos', 35 , 'pontevedra', 'galicia');
 
 SELECT * FROM Direcciones_de_canchas;
+
+select equipo from financian where cif = 'B33333333';
