@@ -265,5 +265,3 @@ SELECT Direcciones_de_canchas.ciudad
     JOIN Canchas_jugador_1_temp1
     ON Direcciones_de_canchas.cancha = Canchas_jugador_1_temp1.cancha
     WHERE Direcciones_de_canchas.cancha = Canchas_jugador_1_temp1.cancha;
-
-SELECT equipo FROM financian WHERE cif = 'B33333333'
